@@ -2,25 +2,72 @@ import { makeStyles } from "@material-ui/core/styles";
 
 export const useStyles = makeStyles((theme) => ({
   navbar: {
-      background: 'transparent !important',
-      boxShadow: 'none !important',
+    background: 'transparent !important',
+    boxShadow: 'none !important',
+    [theme.breakpoints.down("sm")]: {
+      color: '#000 !important'
+    },
   },
   logo: {
+    color: '#000',
+    [theme.breakpoints.down("sm")]: {
+      marginLeft: 5,
+    },
+  },
+  mobileLinks: {
+    textDecoration: 'none',
     color: '#000'
   },
   navigation: {
-      justifyContent: 'center'
+    justifyContent: 'center'
   },
   pagePadding: {
-    padding: '0px 10px'
+    padding: '0px 40px',
+    [theme.breakpoints.down("sm")]: {
+      padding: '0px 20px',
+    },
   },
   aboutPagePadding: {
-      paddingTop: 40
+    paddingTop: 40
+  },
+  imageList: {
+    overflowY: 'unset !important',
+    marginTop: 20,
+  },
+  comissionTitle: {
+    textAlign: 'center',
+    padding: '20px',
+    [theme.breakpoints.down("sm")]: {
+      marginTop: 20,
+      fontSize: 20,
+    },
+  },
+  openseaText: {
+    textAlign: 'center',
+    paddingTop: '10px',
+    color: '#217EE5',
+    textDecoration:'none',
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 20,
+    },
+  },
+  imgRadius: {
+    borderRadius: 5
+  },
+  aboutTitle: {
+    [theme.breakpoints.down("md")]: {
+      paddingBottom: 10
+    },
   },
   aboutImage: {
     float: 'right',
     width: 300,
-    marginLeft: 10
+    margin: '1em 0 1em 1em' ,
+    [theme.breakpoints.down("md")]: {
+      float: 'unset',
+      width: '100%',
+      margin: 0 ,
+    },
   },
   aboutText: {
     fontWeight: 300,
@@ -81,5 +128,11 @@ export const useStyles = makeStyles((theme) => ({
   },
   authenticityImage: {
     width: '100%'
+  },
+  authTitle: {
+    fontSize: '3rem',
+    [theme.breakpoints.down("sm")]: {
+      fontSize: '1.7rem',
+    },
   }
 }))

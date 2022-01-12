@@ -18,7 +18,7 @@ const pages = ['Comissions', 'About', 'Contact', 'Certificate Of Authenticity'];
 
 const ResponsiveAppBar = () => {
 
-    const [anchorElNav, setAnchorElNav] = React.useState(null);
+    const [anchorElNav, setAnchorElNav] = useState(null);
     const classes = useStyles();
 
     const handleOpenNavMenu = (event) => {
@@ -42,7 +42,32 @@ const ResponsiveAppBar = () => {
                         LOGO - NAME
                     </Typography>
 
-                    <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }} >
+
+                    <Typography
+                        variant="h6"
+                        noWrap
+                        sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
+                        className={classes.logo}
+                    >
+                        LOGO
+                    </Typography>
+                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }} className={classes.navigation}>
+                        {pages.map((page) => (
+                            <div>
+                                <Button
+                                    key={page}
+                                    onClick={handleCloseNavMenu}
+                                    sx={{ my: 2, color: 'white' }}
+                                    style={{ color: 'black' }}
+                                    className={classes.logo}
+                                    href={'/' + page}
+                                >
+                                    {page}
+                                </Button>
+                            </div>
+                        ))}
+                    </Box>
+                    <Box sx={{ flexGrow: 1, display: { xs: 'contents', md: 'none' } }} >
                         <IconButton
                             size="large"
                             aria-label="account of current user"
@@ -72,35 +97,10 @@ const ResponsiveAppBar = () => {
                         >
                             {pages.map((page) => (
                                 <MenuItem key={page} onClick={handleCloseNavMenu} >
-                                    <Typography textAlign="center">{page}</Typography>
+                                    <Typography textAlign="center"><a href={'/' + page} alt="link" className={classes.mobileLinks}>{page}</a></Typography>
                                 </MenuItem>
                             ))}
                         </Menu>
-                    </Box>
-                    <Typography
-                        variant="h6"
-                        noWrap
-                        component="div"
-                        sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}
-                    >
-                        LOGO
-                    </Typography>
-                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }} className={classes.navigation}>
-                        {pages.map((page) => (
-                            <div>
-                                <Button
-                                    key={page}
-                                    onClick={handleCloseNavMenu}
-                                    sx={{ my: 2, color: 'white' }}
-                                    style={{ color: 'black' }}
-                                    className={classes.logo}
-                                    href={'/' + page}
-                                >
-                                    {page}
-                                </Button>
-                            </div>
-
-                        ))}
                     </Box>
                 </Toolbar>
             </Container>

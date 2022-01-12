@@ -15,11 +15,11 @@ function About() {
             alignItems="center"
             className={classes.aboutPagePadding}
         >
-            <Grid item xs={3}></Grid>
-            <Grid item xs={6}>
+            <Grid item xs={1} sm={2} md={3}></Grid>
+            <Grid item xs={10} sm={8} md={6}>
+                <Typography variant="h3" className={classes.aboutTitle}>About</Typography>
                 <img src={image[0].img} alt="profile" className={classes.aboutImage}></img>
-                <Typography variant="h3">Name Surename</Typography>
-                <div className={classes.aboutText}>I'm a photographer based in Los Angeles, California who specializes in photographing architecture; I also have a mild airplane obsession.
+                <div className={classes.aboutText} style={{ margin: '1em 0 1em' }}>I'm a photographer based in Los Angeles, California who specializes in photographing architecture; I also have a mild airplane obsession.
                 </div>
                 <div className={classes.aboutText}>I grew up in Ipswich, Massachusetts: a small coastal town that's one part postcard and one part dramatic Boston movie.  Here I was lucky enough to meet a number of amazing teachers who opened my eyes to the world of art and design; this would alter the path of my life in more ways than I could ever imagine.
                 </div>
@@ -36,7 +36,7 @@ function About() {
                 <div className={classes.aboutText3}>Bernhardt Design</div>
 
             </Grid>
-            <Grid item xs={3}></Grid>
+            <Grid item xs={1} sm={2} md={3}></Grid>
         </Grid>
     )
 }

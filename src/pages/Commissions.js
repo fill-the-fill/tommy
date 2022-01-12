@@ -2,25 +2,30 @@ import * as React from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import { useStyles } from "../utils/uiStyles";
+import {useMediaQuery, useTheme} from "@material-ui/core/";
+
 
 export default function Commisions() {
 
     const classes = useStyles();
+    const theme = useTheme();
+    const sm = useMediaQuery(theme.breakpoints.down("sm"));
+    const xs = useMediaQuery(theme.breakpoints.down("xs"));
 
     return (
         <div className={classes.pagePadding}>
-            <ImageList sx={{ width: '100%', height: '100%' }} gap={20} cols={4} rowHeight={'auto'} style={{ marginTop: 0 }}>
+            <ImageList sx={{ width: '100%', height: '100%' }} gap={40} cols={xs ? 1 : sm ? 2 : 4} rowHeight={'auto'} className={classes.imageList}>
                 {itemData.map((item) => (
-                    <ImageListItem key={item.img}>
+                    <ImageListItem key={item.img} >
                         <img
                             src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
                             srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
                             alt={item.title}
                             loading="lazy"
-                            style={{ borderRadius: 5 }}
+                            className={classes.imgRadius}
                         />
-                        <div style={{ textAlign: 'center', padding: '20px 0px' }}>{item.title}</div>
-                        <a href="www.google.com" target="_blank" style={{ textAlign: 'center', paddingTop: '20px 0px', color: '#217EE5' }}>OpenSea</a>
+                        <div className={classes.comissionTitle}>{item.title}</div>
+                        <a href="www.google.com" target="_blank" className={classes.openseaText} >View on OpenSea</a>
                     </ImageListItem>
                 ))}
             </ImageList>

@@ -15,8 +15,8 @@ function Contact() {
             alignItems="center"
             className={classes.aboutPagePadding}
         >
-            <Grid item xs={3}></Grid>
-            <Grid item xs={6}>
+            <Grid item xs={1} sm={2} md={3}></Grid>
+            <Grid item xs={10} sm={8} md={6}>
                 <Typography variant="h3">Contact</Typography>
                 <div className={classes.contactText}>For all pricing and booking inquiries , please fill out the form below. Please include as much relevant information as possible, for example, the location of the project, amount of images needed, intended usage of the images, and timeframe for project completion. I look forward to hearing from you.
                 </div>
@@ -37,13 +37,13 @@ function Contact() {
 
                         <label for="lname">Message</label>
                         <input className={classes.input} type="text" id="lname" name="message" placeholder="What should we talk about.." />
-                        
+
                         <input className={classes.submit} type="submit" value="Submit" />
                     </form>
                 </div>
 
             </Grid>
-            <Grid item xs={3}></Grid>
+            <Grid item xs={1} sm={2} md={3}></Grid>
         </Grid>
     )
 }
