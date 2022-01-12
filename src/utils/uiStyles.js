@@ -62,6 +62,7 @@ export const useStyles = makeStyles((theme) => ({
   aboutImage: {
     float: 'right',
     width: 300,
+    borderRadius: 5,
     margin: '1em 0 1em 1em' ,
     [theme.breakpoints.down("md")]: {
       float: 'unset',
@@ -127,7 +128,8 @@ export const useStyles = makeStyles((theme) => ({
     padding: 20,
   },
   authenticityImage: {
-    width: '100%'
+    width: '100%',
+    borderRadius: 5,
   },
   authTitle: {
     fontSize: '3rem',
