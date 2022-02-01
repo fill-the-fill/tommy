@@ -182,7 +182,7 @@ const ResponsiveAppBar = () => {
               </div>
             </Menu>
           </Box>
-          <Box sx={{ mr: 2, display: { xs: "none", md: "flex" } }}>
+          <Box >
             <a
               target="__blank"
               className={classes.socials}

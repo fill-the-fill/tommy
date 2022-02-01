@@ -21,7 +21,13 @@ import image15 from "../utils/collection-1/image15.jpg";
 
 function Home() {
   return (
-    <Grid container>
+    <Grid
+      container
+      style={{
+        display: "flex",
+        overflow: "hidden",
+      }}
+    >
       <Carousel
         indicatorIconButtonProps={{
           style: {
@@ -29,7 +35,7 @@ function Home() {
           },
         }}
         indicator={{
-            transition: "50ms",
+          transition: "50ms",
         }}
       >
         {itemData.map((image, index) => {
