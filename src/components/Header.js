@@ -102,7 +102,7 @@ const ResponsiveAppBar = () => {
                   >
                     {page}
                   </Button>
-                  |
+                  
                 </div>
               )
             )}
