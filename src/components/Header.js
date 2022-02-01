@@ -109,7 +109,7 @@ const ResponsiveAppBar = () => {
           </Box>
 
           {/* Mobile Pages */}
-          <Box sx={{ flexGrow: 1, display: { xs: "contents", md: "none" } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: "block", md: "none" } }} style={{textAlign: 'right'}}>
             <IconButton
               size="large"
               aria-label="account of current user"
