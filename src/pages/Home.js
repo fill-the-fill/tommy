@@ -24,7 +24,6 @@ function Home() {
     <Grid
       container
       style={{
-        display: "flex",
         overflow: "hidden",
       }}
     >

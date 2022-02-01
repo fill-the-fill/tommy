@@ -101,7 +101,7 @@ const ResponsiveAppBar = () => {
                     href={"/" + page}
                   >
                     {page}
-                  </Button>{" "}
+                  </Button>
                   |
                 </div>
               )
@@ -150,7 +150,7 @@ const ResponsiveAppBar = () => {
                   </Typography>
                 </MenuItem>
               ))}
-              <div style={{textAlign: 'center'}}>
+              <div style={{ textAlign: "center" }}>
                 <a
                   target="__blank"
                   className={classes.socials}
@@ -182,7 +182,7 @@ const ResponsiveAppBar = () => {
               </div>
             </Menu>
           </Box>
-          <Box >
+          <Box sx={{ mr: 2, display: { xs: "none", md: "flex" } }}>
             <a
               target="__blank"
               className={classes.socials}
