@@ -1,51 +1,129 @@
-import React from 'react'
-import Grid from '@mui/material/Grid';
-import { Typography } from '@mui/material';
+import React, { useRef, useState } from "react";
+import emailjs from "emailjs-com";
+import Config from "../config/index.json";
+import {
+  Grid,
+  Button,
+  Typography,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogContentText,
+} from "@material-ui/core";
 import { useStyles } from "../utils/uiStyles";
 
 function Contact() {
+  const classes = useStyles();
+  const form = useRef();
+  const [open, setOpen] = useState(false);
 
-    const classes = useStyles();
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-    return (
-        <Grid
-            container
-            direction="row"
-            justifyContent="center"
-            alignItems="center"
-            className={classes.aboutPagePadding}
-        >
-            <Grid item xs={1} sm={2} md={3}></Grid>
-            <Grid item xs={10} sm={8} md={6}>
-                <Typography variant="h3">Contact</Typography>
-                <div className={classes.contactText}>For all pricing and booking inquiries , please fill out the form below. Please include as much relevant information as possible, for example, the location of the project, amount of images needed, intended usage of the images, and timeframe for project completion. I look forward to hearing from you.
-                </div>
+    emailjs
+      .sendForm(
+        "website",
+        "template_noeqsv1",
+        form.current,
+        "user_vtY72WQywcWRl97l9hIwN"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          handleClickOpen();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+  };
 
-                <div className={classes.contaier}>
-                    <form>
-                        <label for="fname">First Name</label>
-                        <input className={classes.input} type="text" id="fname" name="firstname" placeholder="Your name.." />
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
 
-                        <label for="lname">Last Name</label>
-                        <input className={classes.input} type="text" id="lname" name="lastname" placeholder="Your last name.." />
+  const handleClose = () => {
+    setOpen(false);
+  };
 
-                        <label for="lname">Email</label>
-                        <input className={classes.input} type="text" id="lname" name="email" placeholder="Your email.." />
+  return (
+    <Grid
+      container
+      direction="row"
+      justifyContent="center"
+      alignItems="center"
+      className={classes.aboutPagePadding}
+    >
+      <Grid item xs={1} sm={2} md={3}></Grid>
+      <Grid item xs={10} sm={8} md={6}>
+        <Typography variant="h3">Contact</Typography>
+        <div className={classes.contactText}>{Config.data.contact.text}</div>
 
-                        <label for="lname">Subject</label>
-                        <input className={classes.input} type="text" id="lname" name="subject" placeholder="Whats the subject.." />
+        <div className={classes.contaier}>
+          <form ref={form} onSubmit={sendEmail}>
+            <label for="fname">First Name</label>
+            <input
+              className={classes.input}
+              type="text"
+              id="fname"
+              name="firstname"
+              placeholder="Your name.."
+            />
 
-                        <label for="lname">Message</label>
-                        <input className={classes.input} type="text" id="lname" name="message" placeholder="What should we talk about.." />
+            <label for="lname">Last Name</label>
+            <input
+              className={classes.input}
+              type="text"
+              id="lname"
+              name="lastname"
+              placeholder="Your last name.."
+            />
 
-                        <input className={classes.submit} type="submit" value="Submit" />
-                    </form>
-                </div>
+            <label for="lname">Email</label>
+            <input
+              className={classes.input}
+              type="text"
+              id="lname"
+              name="email"
+              placeholder="Your email.."
+            />
 
-            </Grid>
-            <Grid item xs={1} sm={2} md={3}></Grid>
-        </Grid>
-    )
+            <label for="lname">Subject</label>
+            <input
+              className={classes.input}
+              type="text"
+              id="lname"
+              name="subject"
+              placeholder="Whats the subject.."
+            />
+
+            <label for="lname">Message</label>
+            <input
+              className={classes.input}
+              type="text"
+              id="lname"
+              name="message"
+              placeholder="What should we talk about.."
+            />
+
+            <input className={classes.submit} type="submit" value="Submit" />
+            <Dialog open={open} onClose={handleClose}>
+              <DialogContent>
+                <DialogContentText>
+                {Config.data.contact.thankyou}
+                </DialogContentText>
+              </DialogContent>
+              <DialogActions>
+                <Button onClick={handleClose}>Close</Button>
+              </DialogActions>
+            </Dialog>
+          </form>
+        </div>
+      </Grid>
+      <Grid item xs={1} sm={2} md={3}></Grid>
+    </Grid>
+  );
 }
 
-export default Contact
+export default Contact;

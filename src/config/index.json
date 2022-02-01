@@ -1,0 +1,22 @@
+{
+    "data": {
+        "about": {
+            "title": "About me",
+            "text": "Hey there! My name is Meir and I was born and raised in Israel.",
+            "text2": "It all started when I was 16 years old. I watched a movie that had a scene showing a darkroom in which the main character prints his own negatives. It looked like magic. First turning the black and white film into a negative film, then screening it onto photo paper, and the best part of all, watching the images appear slowly on the dipped photo papers in the developer and fixer chemicals. Magic!",
+            "text3": "Shooting and printing pictures remained my hobby for the next 55 years. The camera become part of me, quite literally an extension of my right arm. Anywhere I traveled and will travel, there is a camera attached to me.",
+            "text4": "Ever since my childhood until today Israel was, and still is, the center of national and international fundamental events, wars and conflicts, political historical struggles, and important worldwide scientific discoveries. All these things created and generated my desire to record, to capture the moments. I realized that a single push on the shutter-release button had the potential to generate a picture that is a memory, a “story”. Sometimes I would capture an event and its details unveiled only after inspecting the photograph carefully. For me, a good picture is an extension and development to the thoughts I had while taking it.",
+            "text5": "The B&W pictures presented on “Opensea” (ntf.photographs) were taken between 1976 and 1979. They were shot in Greece, Canada, USA, Colombia, and Mexico. All the pictures were shot with a Nikon camera body - FM2/T and Nikkor lenses – 35mm, 135mm.",
+            "text6": "I hope you will enjoy the pictures and maybe they will consequently raise some thoughts too."
+        },
+        "contact": {
+            "text": "For all pricing and booking inquiries , please fill out the form below. Please include as much relevant information as possible, for example, the location of the project, amount of images needed, intended usage of the images, and timeframe for project completion. Ilook forward to hearing from you.",
+            "thankyou": "Thank you for reaching out to us, we will contact you shortly!"
+        },
+        "certificate": {
+            "title": "Certificate Of Authenticity",
+            "text": "All photographs purchased on OpenSea will come with a certificate of authenticity hand signed by the photographer himself.",
+            "text2": "Image of the certificate:"
+        }
+    }
+}

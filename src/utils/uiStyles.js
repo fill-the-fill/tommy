@@ -27,8 +27,12 @@ export const useStyles = makeStyles((theme) => ({
       padding: '0px 20px',
     },
   },
+  socials: {
+    color: '#484848',
+    paddingRight: 10
+  },
   aboutPagePadding: {
-    paddingTop: 40
+    padding: '20px 0px'
   },
   imageList: {
     overflowY: 'unset !important',
@@ -47,6 +51,7 @@ export const useStyles = makeStyles((theme) => ({
     paddingTop: '10px',
     color: '#217EE5',
     textDecoration:'none',
+    display: 'block',
     [theme.breakpoints.down("sm")]: {
       fontSize: 20,
     },
@@ -115,7 +120,7 @@ export const useStyles = makeStyles((theme) => ({
     resize: 'vertical',
   },
   submit: {
-    backgroundColor: '#04AA6D',
+    backgroundColor: '#000',
     color: 'white',
     padding: '12px 20px',
     border: 'none',
@@ -136,5 +141,13 @@ export const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       fontSize: '1.7rem',
     },
+  },
+  commissionImg: {
+    overflow: 'hidden',
+    transition: 'transform .5s ease',
+    height: '300',
+    '&:hover': {
+      transform: 'scale(1.1)',
+   },
   }
 }))
