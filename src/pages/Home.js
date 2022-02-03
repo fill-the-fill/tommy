@@ -25,7 +25,7 @@ function Home() {
       container
       style={{marginTop: 10}}
     >
-      <Carousel
+      {/* <Carousel
         indicatorIconButtonProps={{
           style: {
             display: "none",
@@ -50,7 +50,7 @@ function Home() {
             />
           );
         })}
-      </Carousel>
+      </Carousel> */}
     </Grid>
   );
 }
