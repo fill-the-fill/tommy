@@ -4,7 +4,6 @@ import ImageListItem from "@mui/material/ImageListItem";
 import { useStyles } from "../utils/uiStyles";
 import "../App.css";
 import { useMediaQuery, useTheme } from "@material-ui/core/";
-import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
 
 import image0 from "../utils/collection-1/image0-min.jpg";
 import image1 from "../utils/collection-1/image1-min.jpg";
