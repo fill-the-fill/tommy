@@ -1,6 +1,6 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
-import Carousel from "react-material-ui-carousel";
+// import Carousel from "react-material-ui-carousel";
 
 import image0 from "../utils/collection-1/image0-min.jpg";
 import image1 from "../utils/collection-1/image1-min.jpg";
