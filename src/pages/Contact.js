@@ -57,12 +57,12 @@ function Contact() {
     >
       <Grid item xs={1} sm={2} md={3}></Grid>
       <Grid item xs={10} sm={8} md={6}>
-        <Typography variant="h3">Contact</Typography>
+        <Typography variant="h3" style={{marginBottom:20}}>Contact</Typography>
         <div className={classes.contactText}>{Config.data.contact.text}</div>
 
         <div className={classes.contaier}>
           <form ref={form} onSubmit={sendEmail}>
-            <label for="fname">First Name</label>
+            <label htmlFor="fname">First Name</label>
             <input
               className={classes.input}
               type="text"
@@ -71,7 +71,7 @@ function Contact() {
               placeholder="Your name.."
             />
 
-            <label for="lname">Last Name</label>
+            <label htmlFor="lname">Last Name</label>
             <input
               className={classes.input}
               type="text"
@@ -80,7 +80,7 @@ function Contact() {
               placeholder="Your last name.."
             />
 
-            <label for="lname">Email</label>
+            <label htmlFor="lname">Email</label>
             <input
               className={classes.input}
               type="text"
@@ -89,7 +89,7 @@ function Contact() {
               placeholder="Your email.."
             />
 
-            <label for="lname">Subject</label>
+            <label htmlFor="lname">Subject</label>
             <input
               className={classes.input}
               type="text"
@@ -98,7 +98,7 @@ function Contact() {
               placeholder="Whats the subject.."
             />
 
-            <label for="lname">Message</label>
+            <label htmlFor="lname">Message</label>
             <input
               className={classes.input}
               type="text"

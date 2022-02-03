@@ -2,7 +2,7 @@ import React from "react";
 import Grid from "@mui/material/Grid";
 import { useStyles } from "../utils/uiStyles";
 import Config from "../config/index.json";
-import Certificate from "../utils/collection-1/certificate.jpg";
+import Certificate from "../utils/collection-1/certificate-min.jpg";
 
 function Authenticity() {
   const classes = useStyles();

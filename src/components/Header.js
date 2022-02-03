@@ -30,7 +30,7 @@ const socials = {
   instagram: "test",
   facebook: "test",
   twitter: "test",
-  opensea: "test",
+  opensea: "https://opensea.io/collection/oldshutter",
 };
 
 const ResponsiveAppBar = () => {
@@ -80,24 +80,22 @@ const ResponsiveAppBar = () => {
           >
             {pages.map((page, key) =>
               page === "Certificate Of Authenticity" ? (
-                <div style={{ color: "black" }} key={key}>
+                <div key={key}>
                   <Button
                     onClick={handleCloseNavMenu}
                     sx={{ my: 2, color: "white" }}
-                    style={{ color: "black" }}
-                    className={classes.logo}
+                    className={classes.headerLinks}
                     href={"/" + page}
                   >
                     {page}
                   </Button>
                 </div>
               ) : (
-                <div style={{ color: "#D3D3D3" }} key={key}>
+                <div key={key}>
                   <Button
                     onClick={handleCloseNavMenu}
                     sx={{ my: 2, color: "white" }}
-                    style={{ color: "black" }}
-                    className={classes.logo}
+                    className={classes.headerLinks}
                     href={"/" + page}
                   >
                     {page}
@@ -152,30 +150,34 @@ const ResponsiveAppBar = () => {
               ))}
               <div style={{ textAlign: "center" }}>
                 <a
-                  target="__blank"
+                                target="_blank"
+              rel="noreferrer"
                   className={classes.socials}
                   href={socials.instagram}
                 >
                   <InstagramIcon />
                 </a>
                 <a
-                  target="__blank"
+                                target="_blank"
+              rel="noreferrer"
                   className={classes.socials}
                   href={socials.facebook}
                 >
                   <FacebookIcon />
                 </a>
                 <a
-                  target="__blank"
+                                target="_blank"
+              rel="noreferrer"
                   className={classes.socials}
                   href={socials.twitter}
                 >
                   <TwitterIcon />
                 </a>
                 <a
-                  target="__blank"
+                                target="_blank"
+              rel="noreferrer"
                   className={classes.socials}
-                  href={socials.twitter}
+                  href={socials.opensea}
                 >
                   <img src={OpenseaIcon} alt="icon" style={{ width: 25 }}></img>
                 </a>
@@ -184,30 +186,34 @@ const ResponsiveAppBar = () => {
           </Box>
           <Box sx={{ mr: 2, display: { xs: "none", md: "flex" } }}>
             <a
-              target="__blank"
+              target="_blank"
+              rel="noreferrer"
               className={classes.socials}
               href={socials.instagram}
             >
               <InstagramIcon />
             </a>
             <a
-              target="__blank"
+              target="_blank"
+              rel="noreferrer"
               className={classes.socials}
               href={socials.facebook}
             >
               <FacebookIcon />
             </a>
             <a
-              target="__blank"
+              target="_blank"
+              rel="noreferrer"
               className={classes.socials}
               href={socials.twitter}
             >
               <TwitterIcon />
             </a>
             <a
-              target="__blank"
+              target="_blank"
+              rel="noreferrer"
               className={classes.socials}
-              href={socials.twitter}
+              href={socials.opensea}
             >
               <img src={OpenseaIcon} alt="icon" style={{ width: 25 }}></img>
             </a>

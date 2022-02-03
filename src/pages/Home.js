@@ -2,30 +2,28 @@ import React from "react";
 import Grid from "@mui/material/Grid";
 import Carousel from "react-material-ui-carousel";
 
-import image0 from "../utils/collection-1/image0.jpg";
-import image1 from "../utils/collection-1/image1.jpg";
-import image2 from "../utils/collection-1/image2.jpg";
-import image3 from "../utils/collection-1/image3.jpg";
-import image4 from "../utils/collection-1/image4.jpg";
-import image5 from "../utils/collection-1/image5.jpg";
-import image6 from "../utils/collection-1/image6.jpg";
-import image7 from "../utils/collection-1/image7.jpg";
-import image8 from "../utils/collection-1/image8.jpg";
-import image9 from "../utils/collection-1/image9.jpg";
-import image10 from "../utils/collection-1/image10.jpg";
-import image11 from "../utils/collection-1/image11.jpg";
-import image12 from "../utils/collection-1/image12.jpg";
-import image13 from "../utils/collection-1/image13.jpg";
-import image14 from "../utils/collection-1/image14.jpg";
-import image15 from "../utils/collection-1/image15.jpg";
+import image0 from "../utils/collection-1/image0-min.jpg";
+import image1 from "../utils/collection-1/image1-min.jpg";
+import image2 from "../utils/collection-1/image2-min.jpg";
+import image3 from "../utils/collection-1/image3-min.jpg";
+import image4 from "../utils/collection-1/image4-min.jpg";
+import image5 from "../utils/collection-1/image5-min.jpg";
+import image6 from "../utils/collection-1/image6-min.jpg";
+import image7 from "../utils/collection-1/image7-min.jpg";
+import image8 from "../utils/collection-1/image8-min.jpg";
+import image9 from "../utils/collection-1/image9-min.jpg";
+import image10 from "../utils/collection-1/image10-min.jpg";
+import image11 from "../utils/collection-1/image11-min.jpg";
+import image12 from "../utils/collection-1/image12-min.jpg";
+import image13 from "../utils/collection-1/image13-min.jpg";
+import image14 from "../utils/collection-1/image14-min.jpg";
+import image15 from "../utils/collection-1/image15-min.jpg";
 
 function Home() {
   return (
     <Grid
       container
-      style={{
-        overflow: "hidden",
-      }}
+      style={{marginTop: 10}}
     >
       <Carousel
         indicatorIconButtonProps={{
@@ -42,13 +40,16 @@ function Home() {
             <img
               key={index}
               style={{
+                background: '#9c9a9b',
                 width: "100%",
-                objectFit: "cover",
+                objectFit: "contain",
                 height: "100vh",
                 position: "fixed",
               }}
               src={image.img}
               alt="carousel"
+
+              
             />
           );
         })}
