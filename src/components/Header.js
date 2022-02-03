@@ -14,7 +14,7 @@ import Logo from "../utils/logo/logo.png";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import OpenseaIcon from "../utils/logo/opensea.png";
+import OpenseaIcon from "../utils/logo/opensea.svg";
 
 import { useStyles } from "../utils/uiStyles";
 
@@ -47,13 +47,13 @@ const ResponsiveAppBar = () => {
   return (
     <AppBar position="static" className={classes.navbar}>
       <Container maxWidth="xl">
-        <Toolbar disableGutters>
+        <Toolbar>
           {/* Logo */}
           <Typography
             variant="h6"
             noWrap
             component="div"
-            sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
+            sx={{ mr: 10, display: { xs: "none", md: "flex" } }}
             className={classes.logo}
           >
             <a href="/" alt="link" style={{ display: "grid" }}>
@@ -91,7 +91,7 @@ const ResponsiveAppBar = () => {
                   </Button>
                 </div>
               ) : (
-                <div key={key}>
+                <div key={key} style={{ color: "#d3d3d3" }}>
                   <Button
                     onClick={handleCloseNavMenu}
                     sx={{ my: 2, color: "white" }}
@@ -100,14 +100,17 @@ const ResponsiveAppBar = () => {
                   >
                     {page}
                   </Button>
-                  
+                  |
                 </div>
               )
             )}
           </Box>
 
           {/* Mobile Pages */}
-          <Box sx={{ flexGrow: 1, display: { xs: "block", md: "none" } }} style={{textAlign: 'right'}}>
+          <Box
+            sx={{ flexGrow: 1, display: { xs: "block", md: "none" } }}
+            style={{ textAlign: "right" }}
+          >
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -150,36 +153,35 @@ const ResponsiveAppBar = () => {
               ))}
               <div style={{ textAlign: "center" }}>
                 <a
-                                target="_blank"
-              rel="noreferrer"
+                  target="_blank"
+                  rel="noreferrer"
                   className={classes.socials}
                   href={socials.instagram}
                 >
                   <InstagramIcon />
                 </a>
                 <a
-                                target="_blank"
-              rel="noreferrer"
+                  target="_blank"
+                  rel="noreferrer"
                   className={classes.socials}
                   href={socials.facebook}
                 >
                   <FacebookIcon />
                 </a>
                 <a
-                                target="_blank"
-              rel="noreferrer"
+                  target="_blank"
+                  rel="noreferrer"
                   className={classes.socials}
                   href={socials.twitter}
                 >
                   <TwitterIcon />
                 </a>
-                <a
-                                target="_blank"
-              rel="noreferrer"
-                  className={classes.socials}
-                  href={socials.opensea}
-                >
-                  <img src={OpenseaIcon} alt="icon" style={{ width: 25 }}></img>
+                <a target="_blank" rel="noreferrer" href={socials.opensea}>
+                  <img
+                    className={classes.socials2}
+                    src={OpenseaIcon}
+                    alt="icon"
+                  ></img>
                 </a>
               </div>
             </Menu>
@@ -212,10 +214,9 @@ const ResponsiveAppBar = () => {
             <a
               target="_blank"
               rel="noreferrer"
-              className={classes.socials}
               href={socials.opensea}
             >
-              <img src={OpenseaIcon} alt="icon" style={{ width: 25 }}></img>
+              <img src={OpenseaIcon} className={classes.socials1} alt="icon"></img>
             </a>
           </Box>
         </Toolbar>

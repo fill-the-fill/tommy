@@ -32,8 +32,16 @@ export const useStyles = makeStyles((theme) => ({
     },
   },
   socials: {
-    color: '#484848',
-    paddingRight: 10
+    color: '#696969',
+    padding: 1
+  },
+  socials1: {
+    paddingTop: 1,
+    marginTop: 2,
+    width: '20px'
+  },
+  socials2: {
+    width: '22px'
   },
   aboutPagePadding: {
     padding: '20px 0px'

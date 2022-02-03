@@ -40,16 +40,13 @@ function Home() {
             <img
               key={index}
               style={{
-                background: '#9c9a9b',
                 width: "100%",
                 objectFit: "contain",
-                height: "100vh",
+                height: "90%",
                 position: "fixed",
               }}
               src={image.img}
               alt="carousel"
-
-              
             />
           );
         })}
