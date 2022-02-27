@@ -9,11 +9,9 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import Logo from "../utils/logo/logo.png";
+import Logo from "../utils/logo/tlogo.svg";
 
 import InstagramIcon from "@mui/icons-material/Instagram";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import TwitterIcon from "@mui/icons-material/Twitter";
 import OpenseaIcon from "../utils/logo/opensea.svg";
 
 import { useStyles } from "../utils/uiStyles";
@@ -27,9 +25,7 @@ const pages = [
 ];
 
 const socials = {
-  instagram: "test",
-  facebook: "test",
-  twitter: "test",
+  instagram: "https://www.instagram.com/nft.photographs/",
   opensea: "https://opensea.io/collection/oldshutter",
 };
 
@@ -160,22 +156,6 @@ const ResponsiveAppBar = () => {
                 >
                   <InstagramIcon />
                 </a>
-                <a
-                  target="_blank"
-                  rel="noreferrer"
-                  className={classes.socials}
-                  href={socials.facebook}
-                >
-                  <FacebookIcon />
-                </a>
-                <a
-                  target="_blank"
-                  rel="noreferrer"
-                  className={classes.socials}
-                  href={socials.twitter}
-                >
-                  <TwitterIcon />
-                </a>
                 <a target="_blank" rel="noreferrer" href={socials.opensea}>
                   <img
                     className={classes.socials2}
@@ -194,22 +174,6 @@ const ResponsiveAppBar = () => {
               href={socials.instagram}
             >
               <InstagramIcon />
-            </a>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              className={classes.socials}
-              href={socials.facebook}
-            >
-              <FacebookIcon />
-            </a>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              className={classes.socials}
-              href={socials.twitter}
-            >
-              <TwitterIcon />
             </a>
             <a
               target="_blank"
