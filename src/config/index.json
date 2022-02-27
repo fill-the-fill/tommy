@@ -1,7 +1,7 @@
 {
     "data": {
         "about": {
-            "title": "About me",
+            "title": "About",
             "text": "Hey there! My name is Meir and I was born and raised in Israel.",
             "text2": "It all started when I was 16 years old. I watched a movie that had a scene showing a darkroom in which the main character prints his own negatives. It looked like magic. First turning the black and white film into a negative film, then screening it onto photo paper, and the best part of all, watching the images appear slowly on the dipped photo papers in the developer and fixer chemicals. Magic!",
             "text3": "Shooting and printing pictures remained my hobby for the next 55 years. The camera become part of me, quite literally an extension of my right arm. Anywhere I traveled and will travel, there is a camera attached to me.",
@@ -15,7 +15,7 @@
         },
         "certificate": {
             "title": "Certificate Of Authenticity",
-            "text": "All photographs purchased on OpenSea will come with a certificate of authenticity hand signed by the photographer himself.",
+            "text": "All NFTs purchased on OpenSea will come with a certificate of authenticity hand signed by the photographer himself.",
             "text2": "Image of the certificate:"
         }
     }
