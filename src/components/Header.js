@@ -12,7 +12,6 @@ import MenuItem from "@mui/material/MenuItem";
 import Logo from "../utils/logo/tlogo.svg";
 
 import InstagramIcon from "@mui/icons-material/Instagram";
-import OpenseaIcon from "../utils/logo/opensea.svg";
 
 import { useStyles } from "../utils/uiStyles";
 
@@ -156,13 +155,13 @@ const ResponsiveAppBar = () => {
                 >
                   <InstagramIcon />
                 </a>
-                <a target="_blank" rel="noreferrer" href={socials.opensea}>
+                {/* <a target="_blank" rel="noreferrer" href={socials.opensea}>
                   <img
                     className={classes.socials2}
                     src={OpenseaIcon}
                     alt="icon"
                   ></img>
-                </a>
+                </a> */}
               </div>
             </Menu>
           </Box>
@@ -175,13 +174,13 @@ const ResponsiveAppBar = () => {
             >
               <InstagramIcon />
             </a>
-            <a
+            {/* <a
               target="_blank"
               rel="noreferrer"
               href={socials.opensea}
             >
               <img src={OpenseaIcon} className={classes.socials1} alt="icon"></img>
-            </a>
+            </a> */}
           </Box>
         </Toolbar>
       </Container>
