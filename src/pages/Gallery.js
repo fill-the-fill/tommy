@@ -4,6 +4,8 @@ import ImageListItem from "@mui/material/ImageListItem";
 import { useStyles } from "../utils/uiStyles";
 import "../App.css";
 import { useMediaQuery, useTheme } from "@material-ui/core/";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 import image0 from "../utils/collection-1/image0-min.jpg";
 import image1 from "../utils/collection-1/image1-min.jpg";
@@ -35,7 +37,7 @@ export default function Commisions() {
           <ImageListItem key={item.img}>
             <div className="image-hover-wrapper">
               <a target="_blank" href={item.opensea} rel="noreferrer">
-                <img
+                <LazyLoadImage
                   src={`${item.img}?w=248&fit=crop&auto=format`}
                   srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
                   alt={item.title}
