@@ -56,8 +56,8 @@ const ResponsiveAppBar = () => {
             sx={{ mr: 10, display: { xs: "none", md: "flex" } }}
             className={classes.logo}
           >
-            <a href="/" alt="link" style={{ display: "grid" }}>
-              <LazyLoadImage effect="blur" src={Logo} style={{ width: 50 }}/>
+            <a href="/" alt="link">
+              <LazyLoadImage effect="blur" src={Logo} style={{ width: 50, marginTop: 15 }}/>
             </a>
           </Typography>
 
@@ -69,7 +69,7 @@ const ResponsiveAppBar = () => {
             className={classes.logo}
           >
             <Link to="/" alt="link" style={{ display: "grid"}}>
-              <LazyLoadImage effect="blur" src={Logo} alt="logo" style={{ width: 30 }}/>
+              <LazyLoadImage effect="blur" src={Logo} alt="logo" style={{ width: 30, marginTop: 15}}/>
             </Link>
           </Typography>
 

@@ -1,8 +1,7 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
 
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
+import { Carousel } from "react-carousel-minimal";
 
 import image0 from "../utils/collection-1/image0-min.jpg";
 import image1 from "../utils/collection-1/image1-min.jpg";
@@ -23,88 +22,75 @@ import image15 from "../utils/collection-1/image15-min.jpg";
 
 function Home() {
   return (
-    <Grid
-      container
-    >
-      {/* <Carousel
-        indicatorIconButtonProps={{
-          style: {
-            display: "none",
-          },
-        }}
-        indicator={{
-          transition: "50ms",
-        }}
-      > */}
-        {itemData.map((image, index) => {
-          return (
-            <LazyLoadImage
-              key={index}
-              style={{
-                width: "100%",
-                objectFit: "contain",
-                height: "100%",
-                position: "fixed",
-              }}
-              src={image.img}
-              alt="carousel"
-            />
-          );
-        })}
-      {/* </Carousel> */}
+    <Grid container
+    direction="row"
+    justifyContent="center"
+    alignItems="center" >
+      <Carousel
+        data={itemData}
+        time={4000}
+        // width="100%"
+        height="100%"
+        slideNumber={false}
+        captionPosition="bottom"
+        automatic={true}
+        dots={false}
+        slideImageFit="contain"
+        thumbnails={false}
+      />
     </Grid>
   );
 }
 
 const itemData = [
   {
-    img: image0,
+    image: image0,
   },
   {
-    img: image1,
+    image: image1,
   },
   {
-    img: image2,
+    image: image2,
   },
   {
-    img: image3,
+    image: image3,
   },
   {
-    img: image4,
+    image: image4,
   },
   {
-    img: image5,
+    image: image5,
   },
   {
-    img: image6,
+    image: image6,
   },
   {
-    img: image7,
+    image: image7,
   },
   {
-    img: image8,
+    image: image8,
   },
   {
-    img: image9,
+    image: image9,
   },
   {
-    img: image10,
+    image: image10,
   },
   {
-    img: image11,
+    image: image11,
   },
   {
-    img: image12,
+    image: image12,
   },
   {
-    img: image13,
+    image: image13,
   },
   {
-    img: image14,
+    image: image14,
   },
 
   {
-    img: image15,
+    image: image15,
   },
 ];
 
