@@ -13,7 +13,7 @@ import MenuItem from "@mui/material/MenuItem";
 import Logo from "../utils/logo/tlogo.svg";
 
 import InstagramIcon from "@mui/icons-material/Instagram";
-import OpenseaIcon from "../utils/logo/opensea.svg";
+import OpenseaIcon from "../utils/logo/opensea.png";
 
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
