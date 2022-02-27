@@ -27,7 +27,7 @@ function Home() {
     <Grid
       container
     >
-      <Carousel
+      {/* <Carousel
         indicatorIconButtonProps={{
           style: {
             display: "none",
@@ -36,7 +36,7 @@ function Home() {
         indicator={{
           transition: "50ms",
         }}
-      >
+      > */}
         {itemData.map((image, index) => {
           return (
             <LazyLoadImage
@@ -52,7 +52,7 @@ function Home() {
             />
           );
         })}
-      </Carousel>
+      {/* </Carousel> */}
     </Grid>
   );
 }
