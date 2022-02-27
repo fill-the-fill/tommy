@@ -1,6 +1,7 @@
 import { makeStyles } from "@material-ui/core/styles";
 export const useStyles = makeStyles((theme) => ({
   navbar: {
+    height: 80,
     background: 'transparent !important',
     boxShadow: 'none !important',
     [theme.breakpoints.down("sm")]: {

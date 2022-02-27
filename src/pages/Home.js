@@ -1,7 +1,7 @@
-import React from "react";
-import Grid from "@mui/material/Grid";
-
-import { Carousel } from "react-carousel-minimal";
+import React, { Component } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 import image0 from "../utils/collection-1/image0-min.jpg";
 import image1 from "../utils/collection-1/image1-min.jpg";
@@ -20,26 +20,37 @@ import image13 from "../utils/collection-1/image13-min.jpg";
 import image14 from "../utils/collection-1/image14-min.jpg";
 import image15 from "../utils/collection-1/image15-min.jpg";
 
-function Home() {
-  return (
-    <Grid container
-    direction="row"
-    justifyContent="center"
-    alignItems="center" >
-      <Carousel
-        data={itemData}
-        time={4000}
-        // width="100%"
-        height="100%"
-        slideNumber={false}
-        captionPosition="bottom"
-        automatic={true}
-        dots={false}
-        slideImageFit="contain"
-        thumbnails={false}
-      />
-    </Grid>
-  );
+export default class Fade extends Component {
+  render() {
+    const settings = {
+        dots: false,
+        lazyLoad: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        initialSlide: 14,
+        autoplay: true,
+        autoplaySpeed: 4500,
+        cssEase: "linear",
+        fade: true,
+
+
+    };
+    return (
+      <div style={{overflow: 'hidden'}}>
+        <Slider {...settings}>
+          {itemData.map((e) => {
+            return (
+              <div>
+                <img src={e.image} alt="test" style={{objectFit: 'contain', width: '100%', height: '80vh', marginTop: 15}}/>
+              </div>
+            );
+          })}
+        </Slider>
+      </div>
+    );
+  }
 }
 
 const itemData = [
@@ -93,5 +104,3 @@ const itemData = [
     image: image15,
   },
 ];
-
-export default Home;
