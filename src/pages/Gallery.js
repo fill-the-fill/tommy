@@ -38,10 +38,10 @@ export default function Commisions() {
             <div className="image-hover-wrapper">
               <a target="_blank" href={item.opensea} rel="noreferrer">
                 <LazyLoadImage
+                  effect="blur"
                   src={`${item.img}?w=248&fit=crop&auto=format`}
                   srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
                   alt={item.title}
-                  loading="lazy"
                   className={classes.commissionImg}
                 />
                 <span className="image-hover-wrapper-reveal">
