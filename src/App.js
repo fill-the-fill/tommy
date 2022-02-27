@@ -3,7 +3,7 @@ import { createTheme, ThemeProvider } from "@material-ui/core/styles";
 import './App.css';
 
 import Header from "./components/Header"
-import HomePage from './pages/Home'
+import HomePage from './pages/Home2'
 import GalleryPage from "./pages/Gallery"
 import AboutPage from "./pages/About"
 import ContactPage from "./pages/Contact"
