@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -12,6 +13,10 @@ import MenuItem from "@mui/material/MenuItem";
 import Logo from "../utils/logo/tlogo.svg";
 
 import InstagramIcon from "@mui/icons-material/Instagram";
+import OpenseaIcon from "../utils/logo/opensea.svg";
+
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 import { useStyles } from "../utils/uiStyles";
 
@@ -52,7 +57,7 @@ const ResponsiveAppBar = () => {
             className={classes.logo}
           >
             <a href="/" alt="link" style={{ display: "grid" }}>
-              <img src={Logo} alt="logo" style={{ width: 50 }}></img>
+              <LazyLoadImage effect="blur" src={Logo} style={{ width: 50 }}/>
             </a>
           </Typography>
 
@@ -63,9 +68,9 @@ const ResponsiveAppBar = () => {
             sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
             className={classes.logo}
           >
-            <a href="/" alt="link" style={{ display: "grid" }}>
-              <img src={Logo} alt="logo" style={{ width: 30 }}></img>
-            </a>
+            <Link to="/" alt="link" style={{ display: "grid"}}>
+              <LazyLoadImage effect="blur" src={Logo} alt="logo" style={{ width: 30 }}/>
+            </Link>
           </Typography>
 
           {/* Pages */}
@@ -79,10 +84,13 @@ const ResponsiveAppBar = () => {
                   <Button
                     onClick={handleCloseNavMenu}
                     sx={{ my: 2, color: "white" }}
-                    className={classes.headerLinks}
-                    href={"/" + page}
                   >
+                    <Link to={"/" + page} 
+                    className={classes.headerLinks}
+                    
+                    >
                     {page}
+                    </Link>
                   </Button>
                 </div>
               ) : (
@@ -93,7 +101,12 @@ const ResponsiveAppBar = () => {
                     className={classes.headerLinks}
                     href={"/" + page}
                   >
+                  <Link to={"/" + page} 
+                    className={classes.headerLinks}
+                    
+                    >
                     {page}
+                    </Link>
                   </Button>
                   |
                 </div>
@@ -155,13 +168,13 @@ const ResponsiveAppBar = () => {
                 >
                   <InstagramIcon />
                 </a>
-                {/* <a target="_blank" rel="noreferrer" href={socials.opensea}>
-                  <img
+                <a target="_blank" rel="noreferrer" href={socials.opensea}>
+                  <LazyLoadImage effect="blur"
                     className={classes.socials2}
                     src={OpenseaIcon}
                     alt="icon"
-                  ></img>
-                </a> */}
+                  />
+                </a>
               </div>
             </Menu>
           </Box>
@@ -174,13 +187,13 @@ const ResponsiveAppBar = () => {
             >
               <InstagramIcon />
             </a>
-            {/* <a
+            <a
               target="_blank"
               rel="noreferrer"
               href={socials.opensea}
             >
-              <img src={OpenseaIcon} className={classes.socials1} alt="icon"></img>
-            </a> */}
+              <LazyLoadImage effect="blur" src={OpenseaIcon} className={classes.socials1} alt="icon"/>
+            </a>
           </Box>
         </Toolbar>
       </Container>

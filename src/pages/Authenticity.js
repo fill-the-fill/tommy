@@ -3,6 +3,8 @@ import Grid from "@mui/material/Grid";
 import { useStyles } from "../utils/uiStyles";
 import Config from "../config/index.json";
 import Certificate from "../utils/collection-1/certificate-min.jpg";
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 function Authenticity() {
   const classes = useStyles();
@@ -23,11 +25,12 @@ function Authenticity() {
         <div className={classes.aboutText2}>
           {Config.data.certificate.text2}
         </div>
-        <img
+        <LazyLoadImage
+          effect="blur"
           src={Certificate}
           alt="profile"
           className={classes.authenticityImage}
-        ></img>
+        />
       </Grid>
       <Grid item xs={1} sm={2} md={3}></Grid>
     </Grid>

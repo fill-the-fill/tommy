@@ -1,7 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 export const useStyles = makeStyles((theme) => ({
   navbar: {
-    height: 50,
     background: 'transparent !important',
     boxShadow: 'none !important',
     [theme.breakpoints.down("sm")]: {
@@ -21,6 +20,7 @@ export const useStyles = makeStyles((theme) => ({
   headerLinks: {
     fontFamily: "Lato, sans-serif !important",
     color: '#000 !important',
+    textDecoration: 'none !important'
   },
   navigation: {
     justifyContent: 'center'

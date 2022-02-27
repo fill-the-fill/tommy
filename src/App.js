@@ -16,14 +16,14 @@ const mainTheme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={mainTheme}>
-      <Header/>
       <Router>
+      <Header/>
         <Routes>
           <Route exact path="/" element={<HomePage/>} />
           <Route exact path="/Home" element={<HomePage/>} />
           <Route exact path="/Gallery" element={<GalleryPage/>} />
-          <Route exact path="/about" element={<AboutPage/>} />
-          <Route exact path="/contact" element={<ContactPage/>} />
+          <Route exact path="/About" element={<AboutPage/>} />
+          <Route exact path="/Contact" element={<ContactPage/>} />
           <Route exact path="/Certificate%20Of%20Authenticity" element={<AuthenticityPage/>} />
         </Routes>
       </Router>

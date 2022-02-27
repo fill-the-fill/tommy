@@ -2,6 +2,9 @@ import React from "react";
 import Grid from "@mui/material/Grid";
 import Carousel from "react-material-ui-carousel";
 
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
 import image0 from "../utils/collection-1/image0-min.jpg";
 import image1 from "../utils/collection-1/image1-min.jpg";
 import image2 from "../utils/collection-1/image2-min.jpg";
@@ -37,12 +40,12 @@ function Home() {
       >
         {itemData.map((image, index) => {
           return (
-            <img
+            <LazyLoadImage
               key={index}
               style={{
                 width: "100%",
                 objectFit: "contain",
-                height: "90%",
+                height: "100%",
                 position: "fixed",
               }}
               src={image.img}
