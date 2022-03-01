@@ -57,16 +57,7 @@ function Fade(){
             );
           })}
         </Slider>
-        <Grid
-          container
-          direction="column"
-          justifyContent="center"
-          alignItems="center"
-        >
-          <Grid item>
-            <div className={classes.aboutText}>{Config.data.homepage.text}</div>
-          </Grid>
-        </Grid>
+        <div className={classes.homeText}>{Config.data.homepage.text}</div>
       </div>
     );
   }

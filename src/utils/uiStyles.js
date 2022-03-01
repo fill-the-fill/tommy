@@ -1,7 +1,7 @@
 import { makeStyles } from "@material-ui/core/styles";
 export const useStyles = makeStyles((theme) => ({
   navbar: {
-    height: 80,
+    height: '8vh',
     background: 'transparent !important',
     boxShadow: 'none !important',
     [theme.breakpoints.down("sm")]: {
@@ -50,7 +50,7 @@ export const useStyles = makeStyles((theme) => ({
     height: "80vh",
     marginBottom: 15,
     [theme.breakpoints.down("sm")]: {
-      height: "50vh",
+      height: "60vh",
     },
   },
   aboutPagePadding: {
@@ -96,6 +96,18 @@ export const useStyles = makeStyles((theme) => ({
       width: '100%',
       margin: 0 ,
     },
+  },
+  homeText: {
+    marginTop: 20,
+    fontWeight: 300,
+    fontStyle: 'normal',
+    lineHeight: '1.5em',
+    textTransform: 'none',
+    fontSize: '1.1rem',
+    textAlign: 'center',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   aboutText: {
     fontWeight: 300,
