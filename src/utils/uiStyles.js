@@ -53,10 +53,6 @@ export const useStyles = makeStyles((theme) => ({
       height: "50vh",
     },
   },
-  homeText: {
-    textAlign: 'center',
-      padding: 10,
-  },
   aboutPagePadding: {
     padding: '20px 0px'
   },
