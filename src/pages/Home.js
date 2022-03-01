@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Config from "../config/index.json";
+import Grid from "@mui/material/Grid";
 
 import image0 from "../utils/collection-1/image0-min.jpg";
 import image1 from "../utils/collection-1/image1-min.jpg";
@@ -23,19 +25,17 @@ import image15 from "../utils/collection-1/image15-min.jpg";
 export default class Fade extends Component {
   render() {
     const settings = {
-        dots: false,
-        lazyLoad: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        initialSlide: 14,
-        autoplay: true,
-        autoplaySpeed: 4500,
-        cssEase: "linear",
-        fade: true,
-
-
+      dots: false,
+      lazyLoad: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      initialSlide: 14,
+      autoplay: true,
+      autoplaySpeed: 4500,
+      cssEase: "linear",
+      fade: true,
     };
     return (
       <div style={{overflow: 'hidden'}}>
@@ -43,11 +43,30 @@ export default class Fade extends Component {
           {itemData.map((e) => {
             return (
               <div>
-                <img src={e.image} alt="test" style={{objectFit: 'contain', width: '100%', height: '80vh', marginTop: 15}}/>
+                <img
+                  src={e.image}
+                  alt="test"
+                  style={{
+                    objectFit: "contain",
+                    width: "100%",
+                    height: "80vh",
+                    marginBottom: 15,
+                  }}
+                />
               </div>
             );
           })}
         </Slider>
+        <Grid
+          container
+          direction="column"
+          justifyContent="center"
+          alignItems="center"
+        >
+          <Grid item>
+            <div>{Config.data.homepage.text}</div>
+          </Grid>
+        </Grid>
       </div>
     );
   }
