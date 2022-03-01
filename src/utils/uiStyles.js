@@ -44,6 +44,19 @@ export const useStyles = makeStyles((theme) => ({
   socials2: {
     width: '22px'
   },
+  slider: {
+    objectFit: "contain",
+    width: "100%",
+    height: "80vh",
+    marginBottom: 15,
+    [theme.breakpoints.down("sm")]: {
+      height: "50vh",
+    },
+  },
+  homeText: {
+    textAlign: 'center',
+      padding: 10,
+  },
   aboutPagePadding: {
     padding: '20px 0px'
   },

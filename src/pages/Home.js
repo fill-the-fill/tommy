@@ -1,9 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Config from "../config/index.json";
 import Grid from "@mui/material/Grid";
+import { useStyles } from "../utils/uiStyles";
 
 import image0 from "../utils/collection-1/image0-min.jpg";
 import image1 from "../utils/collection-1/image1-min.jpg";
@@ -22,8 +23,11 @@ import image13 from "../utils/collection-1/image13-min.jpg";
 import image14 from "../utils/collection-1/image14-min.jpg";
 import image15 from "../utils/collection-1/image15-min.jpg";
 
-export default class Fade extends Component {
-  render() {
+
+function Fade(){
+
+    const classes = useStyles()
+
     const settings = {
       dots: false,
       lazyLoad: true,
@@ -46,12 +50,7 @@ export default class Fade extends Component {
                 <img
                   src={e.image}
                   alt="test"
-                  style={{
-                    objectFit: "contain",
-                    width: "100%",
-                    height: "80vh",
-                    marginBottom: 15,
-                  }}
+                  className={classes.slider}
                 />
               </div>
             );
@@ -64,13 +63,12 @@ export default class Fade extends Component {
           alignItems="center"
         >
           <Grid item>
-            <div>{Config.data.homepage.text}</div>
+            <div className={classes.homeText}>{Config.data.homepage.text}</div>
           </Grid>
         </Grid>
       </div>
     );
   }
-}
 
 const itemData = [
   {
@@ -123,3 +121,5 @@ const itemData = [
     image: image15,
   },
 ];
+
+export default Fade
