@@ -40,6 +40,7 @@ function Fade(){
       autoplaySpeed: 4500,
       cssEase: "linear",
       fade: true,
+      pauseOnHover: false,
     };
     return (
       <div style={{overflow: 'hidden'}}>
