@@ -3,7 +3,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Config from "../config/index.json";
-import Grid from "@mui/material/Grid";
 import { useStyles } from "../utils/uiStyles";
 
 import image0 from "../utils/collection-1/image0-min.jpg";
